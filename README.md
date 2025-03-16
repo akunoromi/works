@@ -1,1 +1,0 @@
-![](https://lihatlangsung.noromi.web.id/1:/Lambang%20dan%20Logo/Lambang%20dan%20Logo%20Sampah/Lambang%20Sampah%20Beraksen.png)
