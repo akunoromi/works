@@ -4,8 +4,24 @@
 <meta charset="{{ site.encoding }}">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="{{ page.author | default: site.author | escape }}">
-<link rel="icon" type="image/x-icon" href="https://nrmi.my.id/favicon.ico">
+<link rel="icon" type="image/x-icon" href="https://aku.nrmi.my.id/favicon.png">
 <link rel="canonical" href="{{ page.url | absolute_url }}">
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  function scrollToHash() {
+    if (window.location.hash) {
+      const target = document.querySelector(window.location.hash);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }
+  scrollToHash();
+  window.addEventListener("load", scrollToHash);
+  window.addEventListener("hashchange", scrollToHash);
+});
+</script>
+
 {% if site.show_frame %}
 <link rel="stylesheet" href="{{ "/assets/css/frame.css" | relative_url }}">
 {% else %}
@@ -19,13 +35,13 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
   </style>
-
-<header>
+  
   <header>
-    <img src="https://nrmi.my.id/favicon.ico" style="height: 40px; margin-right: 10px;margin: 0px;">
-    <h2 style="margin-bottom: 1px;margin-top: 0px;">Noromi Draft</h2>
-  <p style="margin: 1px;">Kumpulan garapan yang gagal dirilis.</p>
-  </header></header>
+    <header>
+      <img src="https://aku.nrmi.my.id/favicon.png" style="height: 40px; margin-right: 10px;margin: 0px;">
+      <h2 style="margin-bottom: 1px;margin-top: 0px;">Noromi Works</h2>
+    <p style="margin: 1px;">Kumpulan Garapan Noromi!</p>
+    </header></header>
 
 {{ content }}
 

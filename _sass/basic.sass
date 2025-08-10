@@ -15,6 +15,11 @@ body
   body
     background: $dark
     color: $light
+  table:first-of-type td:first-child a
+    color: $light !important
+  body > header, body > footer
+    background: $dark
+    color: $light !important
 
 h1, h2, h3, h4, h5, h6
   font-weight: $heading-weight
@@ -26,7 +31,7 @@ p
   text-align: justify
 
 a
-  color: $link-color !important
+  color: $link-color
   text-decoration: inherit
   &:hover
     text-decoration: underline
@@ -92,3 +97,6 @@ pre
   border-radius: 2px
   margin: 0 .1em
   padding: .2em .4em
+
+table:first-of-type td:first-child a
+  color: $dark
