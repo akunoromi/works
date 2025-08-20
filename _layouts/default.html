@@ -24,21 +24,14 @@ document.addEventListener("DOMContentLoaded", function () {
 <script id="chatBroEmbedCode">/* Chatbro Widget Embed Code Start */function ChatbroLoader(chats,async){async=!1!==async;var params={embedChatsParameters:chats instanceof Array?chats:[chats],lang:navigator.language||navigator.userLanguage,needLoadCode:'undefined'==typeof Chatbro,embedParamsVersion:localStorage.embedParamsVersion,chatbroScriptVersion:localStorage.chatbroScriptVersion},xhr=new XMLHttpRequest;xhr.withCredentials=!0,xhr.onload=function(){eval(xhr.responseText)},xhr.onerror=function(){console.error('Chatbro loading error')},xhr.open('GET','https://www.chatbro.com/embed.js?'+btoa(unescape(encodeURIComponent(JSON.stringify(params)))),async),xhr.send()}/* Chatbro Widget Embed Code End */ChatbroLoader({encodedChatId: '597Te'});</script>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  const images = [
-    'https://aku.nrmi.my.id/banner1.jpg',
-    'https://aku.nrmi.my.id/banner2.jpg',
-    'https://aku.nrmi.my.id/banner3.jpg',
-    'https://aku.nrmi.my.id/banner4.jpg',
-    'https://aku.nrmi.my.id/banner5.jpg',
-    'https://aku.nrmi.my.id/banner6.jpg'
-  ];
+  const images = ['1','2','3','4','5','6'];
   
   const randomImage = images[Math.floor(Math.random() * images.length)];
   
   const header = document.getElementById("header");
   if (header) {
     header.style.backgroundImage =
-      `linear-gradient(to left, rgba(0,0,0,0.1), rgba(0,0,0,0.8)), url('${randomImage}')`;
+      `linear-gradient(to left, rgba(0,0,0,0.1), rgba(0,0,0,0.8)), url('https://aku.nrmi.my.id/banner${randomImage}.jpg')`;
   } else {
     console.error("Elemen #header tidak ditemukan.");
   }
