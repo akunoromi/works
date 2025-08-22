@@ -6,6 +6,12 @@
 <meta name="author" content="{{ page.author | default: site.author | escape }}">
 <link rel="icon" type="image/x-icon" href="https://aku.nrmi.my.id/favicon.png">
 <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+<meta itemprop="image" content="{% if page.image %}{{ page.image }}{% elsif site.url %}{{ site.url }}/banner.jpg{% endif %}">
+<meta property="og:image" content="{% if page.image %}{{ page.image }}{% elsif site.url %}{{ site.url }}/banner.jpg{% endif %}">
+<meta name="twitter:image" content="{% if page.image %}{{ page.image }}{% elsif site.url %}{{ site.url }}/banner.jpg{% endif %}">
+
+<meta property="og:theme-color" content="#E611E6">
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   function scrollToHash() {
