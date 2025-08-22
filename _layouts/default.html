@@ -12,6 +12,9 @@
 <meta name="twitter:image" content="{% if page.image %}{{ page.image }}{% elsif site.url %}{{ site.url }}/banner.jpg{% endif %}">
 
 <meta property="og:theme-color" content="#E611E6">
+
+<meta itemprop="name" content="{% if page.title %}{{ site.title }}: {{ page.title }}{% elsif site.title %}{{ site.title }}{% endif %}">
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   function scrollToHash() {
