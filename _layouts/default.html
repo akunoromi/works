@@ -6,14 +6,31 @@
 <meta name="author" content="{{ page.author | default: site.author | escape }}">
 <link rel="icon" type="image/x-icon" href="https://aku.nrmi.my.id/favicon.png">
 <link rel="canonical" href="{{ page.url | absolute_url }}">
+<meta property="og:theme-color" content="#E611E6">
+<meta name="msapplication-TileColor" content="#E611E6">
+<meta name="theme-color" content="#E611E6">
+<meta itemprop="name" content="{% if page.title %}{{ site.title }}: {{ page.title }}{% elsif site.title %}{{ site.title }}{% endif %}">
 
 <meta itemprop="image" content="{% if page.image %}{{ page.image }}{% elsif site.url %}{{ site.url }}/banner.jpg{% endif %}">
 <meta property="og:image" content="{% if page.image %}{{ page.image }}{% elsif site.url %}{{ site.url }}/banner.jpg{% endif %}">
 <meta name="twitter:image" content="{% if page.image %}{{ page.image }}{% elsif site.url %}{{ site.url }}/banner.jpg{% endif %}">
 
-<meta property="og:theme-color" content="#E611E6">
+<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% elsif site.description %}{{ site.description }}{% endif %}">
+<meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% elsif site.description %}{{ site.description }}{% endif %}">
+<meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% elsif site.description %}{{ site.description }}{% endif %}">
 
-<meta itemprop="name" content="{% if page.title %}{{ site.title }}: {{ page.title }}{% elsif site.title %}{{ site.title }}{% endif %}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<link rel="icon" href="https://aku.nrmi.my.id/favicon.png">
+<meta property="og:site_name" content="{{ site.title }}">
+
+<meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% elsif site.title %}{{ site.title }}{% endif %}">
+<meta name="twitter:theme-color" content="#E611E6">
+<meta name="twitter:site" content="{{ site.title }}">
+<meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+<link rel="icon" href="https://aku.nrmi.my.id/favicon.png">
+<meta name="msapplication-TileImage" content="https://aku.nrmi.my.id/favicon.png">
+<meta name="twitter:card" content="summary_large_image">
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
